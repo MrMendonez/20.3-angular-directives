@@ -1,0 +1,11 @@
+<div class="container" ng-controller="HomeworkController">
+  <div class="row">
+    <div class="col-md-7">
+      <ul>
+        <homework-item ng-repeat="homework in homeworks" student="{{ homework.student }}" pizza="homework.pizza"></homework-item>
+        <!-- <li ng-repeat="homework in homeworks">{{ homework }}</li> -->
+      </ul>
+    </div>
+  </div>
+  {{ homeworks }}
+</div>

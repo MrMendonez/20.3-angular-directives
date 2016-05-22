@@ -1,0 +1,15 @@
+<li>
+  <strong
+    ng-click="changeName()"
+    ng-mouseenter="getRepos(student)"
+    ng-mouseleave="clearRepos()"
+    >
+    {{ student }}
+  </strong>
+  likes
+  <em ng-click="likePineapple()">{{ pizza }}</em>
+  <br >
+  <div ng-repeat="repo in repos">
+    {{ repo.full_name }}
+  </div>
+</li>

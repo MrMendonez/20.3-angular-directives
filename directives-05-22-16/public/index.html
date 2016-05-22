@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="homeworkApp">
+<head>
+  <title>Awesome Directives</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Custom Styles -->
+  <!-- <link rel="stylesheet" type="text/css" href="/css/styles.css"> -->
+  <base href="/" />
+</head>
+<body>
+  <div ng-include="'/views/partials/navbar-partial.html'"></div>
+
+  <ui-view></ui-view>
+
+  <!-- Angular -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.js"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- Custom Scripts -->
+  <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript" src="/js//configs/appStates.js"></script>
+  <script type="text/javascript" src="/js/controllers/HomeworkController.js"></script>
+  <script type="text/javascript" src="/js/directives/homeworkItem.js"></script>
+</body>
+</html>
