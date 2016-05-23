@@ -5,8 +5,15 @@ angular.module('homeworkApp')
       scope: {
         movie: '=', // the directive gets the student parameter from the parent, however, it can't pass anything back. The '@' asks for the value not the expression or the object. '=' is two-way data-binding
       },
-      // template: '<li>{{ student }} likes {{ pizza }}</li>'
-      // template: '<div>{{movie}}</div>'
-      templateUrl: '/views/directives/movie-item.html'
+      templateUrl: '/views/directives/movie-item.html',
+      controller: function($scope, $http) {
+        $scope.getActors = function() {
+          console.log('getActors function fired');
+          $http.get('http://www.omdbapi.com/?i=' + $scope.movie.imdbID + '&plot=short&r=json')
+          .then(function(response) {
+            $scope.actors = response.data.Actors.split(',');
+          })
+        }
+      }
     }
   });
